@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                
+                overflow-y: auto;
+                background-color: rgb(255, 174, 0);
+                padding: 1rem;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            #Menu {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 220px;
+                height: 100vh;
+                background-color:rgb(255, 217, 135);
+                padding-top: 20px;
+                box-shadow: 0 10px 10px
+            }
+            #Menu button {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                background: none;
+                text-align: left;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            #Menu button:hover{
+                background-color: rgb(255, 225, 159);
+            }
+            a {
+                text-decoration: none;
+                color:inherit;
+
+            }
+            a:focus{
+                outline:none;
+            }
+            a:visited, a:hover, a:active{
+                color:inherit;
+                text-decoration: none;
+            }
+            #Dashboard{
+                position:fixed;
+                top: 50px;
+                left:350px;
+                max-width: 900px;
+                width: 100%;
+                height: 500px;
+                overflow-y: auto;
+
+                background: rgb(255,217,135);
+                border-radius: 1rem;
+                padding: 2rem 1.5rem 2.5rem 1.5rem;
+                box-shadow: 0 10px 30px rgb(0,0,0);
+            }
+            /* Scrollbar width */
+            #Dashboard::-webkit-scrollbar {
+                width: 10px;
+            }
+            #Dashboard::-webkit-scrollbar-track {
+                background: #ffe5a0;
+                border-radius: 1rem;
+            }
+            #Dashboard::-webkit-scrollbar-thumb {
+                background: #ffb300;
+                border-radius: 1rem;
+            }
+            #Dashboard::-webkit-scrollbar-thumb:hover {
+                background: #ff8c00;
+            }
+            .Heading{
+                text-align: center; 
+                margin-top: -40px;
+            }
+            .Title{
+                font-style: oblique;
+                line-height: 0.7;
+            }
+            .Progress-Bar{
+                margin-top: -10px;
+                width: 100%;
+                height: 20px;
+                appearance: none;
+                -webkit-appearance: none;
+                
+            }
+
+            .Progress-Bar::-webkit-progress-bar {
+                background-color: #eee;
+                border-radius: 10px;
+            }
+
+            .Progress-Bar::-webkit-progress-value {
+                background-color: #4caf50;
+                border-radius: 10px;
+            }
+
+            .Progress-Bar::-moz-progress-bar {
+                background-color: #4caf50;
+            }
+                        
+            .Percent{
+                margin-top: -20px;
+                text-align: right;
+                margin-bottom: -20px;
+            }
+
+
+
+
+                                                             
+
+
+
+        </style>
+        
+    </head>
+    <body>
+        <div id = "Menu">
+            <button> 
+                <a href="index.html">Home </a>
+            </button>
+            <button> 
+                <a href="Dashboard.html">Dashboard </a>
+            </button>
+            <button>
+                
+                <a href="Upload Pages.html">Upload</a>
+
+            </button>
+            
+        </div>
+
+        <div id="Dashboard">
+            <div class = "Heading">
+               <h1>DASHBOARD PROGRESS</h1>
+            </div>
+
+
+            <div id = "QUIZZES">
+                <div id = "Quiz-1">
+                    <div class = "Title">
+                        <h1>
+                            QUIZZES    
+                        </h1>
+                        <h2>
+                            Quiz No.1
+                        </h2>
+                        <h3>
+                            SCORE: 18/20
+                        </h3>
+                    </div>
+
+                    <div id ="Quiz-Progress-1">
+                        <progress class = "Progress-Bar" value="18" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                             90%
+                         </h3>
+                    </div>
+                </div>
+                
+                
+
+                <div id = "Quiz-2">
+
+                    <div class = "Title">
+                        <h2>
+                            Quiz No.2
+                        </h2>
+                        <h3>
+                            SCORE: 16/20
+                        </h3>
+                    </div>
+
+                    <div id = "Quiz-Progress-2">
+                        <progress class = "Progress-Bar" value="16" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            80%
+                        </h3>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id = "Lab-Work">
+                <div id = "Lab-Work-1">
+
+                    <div class = "Title">
+                        <h1 style = "padding-top: 10px;">
+                            LAB WORK
+                        </h1>
+                        <h2>
+                            Lab Work No. 1
+                        </h2>
+                        <h3>
+                        Score: N/A
+                        </h3>
+                    </div>
+
+                    <div id = "Lab-Progress-1">
+                        <progress class = "Progress-Bar" value="0" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            0%
+                        </h3>
+                    </div>
+                </div>
+                
+                <div id = "Lab-Work-2">
+                    <div class = "Title">
+                        <h2>
+                            Lab Work No. 2
+                        </h2>
+                        <h3>
+                        Score: N/A
+                        </h3>
+                    </div>
+
+                    <div id = "Lab-Progress-2">
+                        <progress class = "Progress-Bar" value="0" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            0%
+                        </h3>
+                    </div>
+                </div>
+                <div id = "Lab-Work-3">
+                    <div class = "Title">
+                        <h2>
+                            Lab Work No. 3
+                        </h2>
+                        <h3>
+                        Score: N/A
+                        </h3>
+                    </div>
+
+                    <div id = "Lab-Progress-2">
+                        <progress class = "Progress-Bar" value="0" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            0%
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "Major Exam">
+                
+                <div id = "Midterms Exam">
+                    <div class = "Title">
+                        <h1 style = "padding-top: 10px;">
+                            Major Exam
+                        </h1>
+                        <h2>
+                            Midterms Exam
+                        </h2>
+                        <h3>
+                        Score: N/A
+                        </h3>
+                    </div>
+
+                    <div id = "Major-Exam-Progress-1">
+                        <progress class = "Progress-Bar" value="0" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            0%
+                        </h3>
+                    </div>
+                </div>
+                <div id = "Finals Exam">
+                    <div class = "Title">
+                        <h2>
+                            Finals Exam
+                        </h2>
+                        <h3>
+                        Score: N/A
+                        </h3>
+                    </div>
+
+                    <div id = "Major-Exam-Progress-2">
+                        <progress class = "Progress-Bar" value="0" max="20"></progress>
+                    </div>
+
+                    <div class = "Percent">
+                        <h3>
+                            0%
+                        </h3>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+    </body>
+</html>

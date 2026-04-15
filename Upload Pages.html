@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                
+                overflow-y: auto;
+                background-color: rgb(255, 174, 0);
+                padding: 1rem;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            #Menu {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 220px;
+                height: 100vh;
+                background-color:rgb(255, 217, 135);
+                padding-top: 20px;
+                box-shadow: 0 10px 10px
+            }
+            #Menu button {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                background: none;
+                text-align: left;
+                font-size: 30px;
+                cursor: pointer;
+            }
+            #Menu button:hover{
+                background-color: rgb(255, 225, 159);
+            }
+            a {
+                text-decoration: none;
+                color:inherit;
+
+            }
+            a:focus{
+                outline:none;
+            }
+            a:visited, a:hover, a:active{
+                color:inherit;
+                text-decoration: none;
+            }
+            #Quiz{
+                margin-top: 30px;
+                margin-left: 250px;
+                max-width: 550px;
+                width: 100%;
+                height: 500px;
+                overflow-y: auto;
+
+                background: rgb(255,217,135);
+                border-radius: 1rem;
+                padding: 2rem 1.5rem 2.5rem 1.5rem;
+                box-shadow: 0 10px 30px rgb(0,0,0);
+            }
+            /* Scrollbar width */
+            #Quiz::-webkit-scrollbar {
+                width: 10px;
+            }
+            #Quiz::-webkit-scrollbar-track {
+                background: #ffe5a0;
+                border-radius: 1rem;
+            }
+            #Quiz::-webkit-scrollbar-thumb {
+                background: #ffb300;
+                border-radius: 1rem;
+                
+            }
+            #Quiz::-webkit-scrollbar-thumb:hover {
+                background: #ff8c00;
+            }
+            .Heading{
+                text-align: center; 
+                margin-top: -40px;
+            }
+            .Title{
+                font-style: oblique;
+                line-height: 0.7;
+            }
+            .Upload-Option-Container{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                
+            }
+            .Upload-File{
+                
+                margin-left: 38px;
+
+            }
+
+            .Upload-Image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-style: oblique;
+
+                background: rgb(252, 232, 190);
+                width: 180px;
+                height: 250px;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                transition: 0.2s ease;
+            }
+            .Upload-Button{
+                font-size: 10px;
+                margin-top: 5px;
+                margin-left: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(252, 232, 190);
+                width: 60px;
+                height: 40px;
+                border-radius: 1rem;
+                cursor: pointer;
+                
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                transition: 0.2s ease;
+
+            }
+            .Work-Image-Box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: #ffe5a0;
+                width: 300px;
+                height: 390px;
+                border-radius: 5px;
+                
+            }
+            .Work-Image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+            #Lab-Work{
+                margin-top: 90px;
+                margin-left: 250px;
+                max-width: 550px;
+                width: 100%;
+                height: 500px;
+                overflow-y: auto;
+
+                background: rgb(255,217,135);
+                border-radius: 1rem;
+                padding: 2rem 1.5rem 2.5rem 1.5rem;
+                box-shadow: 0 10px 30px rgb(0,0,0);
+            }
+            /* Scrollbar width */
+            #Lab-Work::-webkit-scrollbar {
+                width: 10px;
+            }
+            #Lab-Work::-webkit-scrollbar-track {
+                background: #ffe5a0;
+                border-radius: 1rem;
+            }
+            #Lab-Work::-webkit-scrollbar-thumb {
+                background: #ffb300;
+                border-radius: 1rem;
+                
+            }
+            #Lab-Work::-webkit-scrollbar-thumb:hover {
+                background: #ff8c00;
+            }
+            #Major-Exam{
+                margin-top: 100px;
+                margin-left: 250px;
+                max-width: 550px;
+                width: 100%;
+                height: 500px;
+                overflow-y: auto;
+
+                background: rgb(255,217,135);
+                border-radius: 1rem;
+                padding: 2rem 1.5rem 2.5rem 1.5rem;
+                box-shadow: 0 10px 30px rgb(0,0,0);
+            }
+            /* Scrollbar width */
+            #Major-Exam::-webkit-scrollbar {
+                width: 10px;
+            }
+            #Major-Exam::-webkit-scrollbar-track {
+                background: #ffe5a0;
+                border-radius: 1rem;
+            }
+            #Major-Exam::-webkit-scrollbar-thumb {
+                background: #ffb300;
+                border-radius: 1rem;
+                
+            }
+            #Major-Exam::-webkit-scrollbar-thumb:hover {
+                background: #ff8c00;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        <div id = "Menu">
+            <button> 
+                <a href="index.html">Home </a>
+            </button>
+            <button> 
+                <a href="Dashboard.html">Dashboard </a>
+            </button>
+            <button>
+                
+                <a href="Upload Pages.html">Upload</a>
+
+            </button>
+            
+        </div>
+
+        <div id="Quiz" >
+            <div class = "Heading">
+               <h1>QUIZZES</h1>
+            </div>
+
+            <div id = "QUIZ">
+                <div id = "Quiz-1">
+                    <div class = "Title">
+                        <h2>
+                            Quiz No.1
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "QUIZ 1.jpg" class = "Work-Image" alt = "IMAGE"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Quiz-2">
+                    <div class = "Title">
+                        <h2>
+                            Quiz No.2
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "QUIZ 2.jpg" class = "Work-Image" alt = "IMAGE"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Quiz-3">
+                    <div class = "Title">
+                        <h2>
+                            Quiz No.3
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+
+
+        </div>
+
+
+
+        <div id="Lab-Work" >
+            <div class = "Heading">
+               <h1>LABORATORY WORK</h1>
+            </div>
+
+            <div id = "LAB-WWORK">
+                <div id = "Lab-1">
+                    <div class = "Title">
+                        <h2>
+                            Lab Work No.1
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Lab-2">
+                    <div class = "Title">
+                        <h2>
+                            Lab Work No.2
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Lab-3">
+                    <div class = "Title">
+                        <h2>
+                            Lab Work No.3
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+
+
+        </div>
+
+        <div id="Major-Exam" >
+            <div class = "Heading">
+               <h1>MAJOR EXAM</h1>
+            </div>
+
+            <div id = "LAB-WWORK">
+                <div id = "Midterms">
+                    <div class = "Title">
+                        <h2>
+                            Midterms Exam
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+                <div id = "Finals">
+                    <div class = "Title">
+                        <h2>
+                            Finals Exam
+                        </h2>
+                    </div>
+
+                    <div class = "Upload-Option-Container">
+                        <div class = "Work-Image-Box">
+                            <image src = "" class = "Work-Image" alt = "N/A"></image>
+                        </div>
+                        <div class = "Upload-File">
+                                <label class = "Upload-Image">
+                                    
+                                    <label>UPLOAD FILE HERE</label>
+                                
+                                    <input type = "file" hidden>
+                                </label>
+                                <button class="Upload-Button" hidden>
+                                    <label>SUBMIT</label>
+
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+
+        </div>
+    </body>
+</html>

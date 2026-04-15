@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(255, 174, 0);
+                padding: 1rem;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                
+            }
+            #Menu {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 220px;
+                height: 100vh;
+                background-color:rgb(255, 217, 135);
+                padding-top: 20px;
+                box-shadow: 0 10px 10px
+            }
+            #Menu button {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                background: none;
+                text-align: left;
+                font-size: 30px;
+                
+                cursor: pointer;
+            }
+            #Menu button:hover{
+                background-color: rgb(255, 225, 159);
+            }
+             
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:focus {
+                outline: none;
+            }
+            a:visited, a:hover, a:active {
+                color: inherit;
+                text-decoration: none;
+            }  
+
+            #HomePage {
+                position: fixed;
+                top: 150px;
+                left: 300px;
+                max-width: 850px;
+                width: 100%;
+                background: rgb(255, 217, 135);
+                border-radius: 2rem;
+                padding: 2rem 1.5rem 2.5rem 1.5rem;
+                box-shadow: 0 10px 30px rgb(0, 0, 0);
+               
+            }
+            
+            .Picture-item{
+                position:fixed;
+                margin-left: 305px;
+                margin-top: 20px;
+                width: 200px;
+                height: 200px;
+                border-radius: 1.5rem;
+                box-shadow: 0 8px 12px #9d87cf;
+                border: 1px solid white;
+
+
+            }
+            .Picture-item img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1.4rem;
+
+
+            }
+
+            .content{
+                padding-left: 40px;
+
+            }
+            .info {
+                font-size: 22px;
+            }
+
+            .info-personal-name{
+               padding-left: 180px;
+               margin-top: -10px;
+            }
+            .info-personal-course{
+               padding-left: 180px;
+               margin-top: -20px;
+            }
+            .info-personal-bio{
+                text-align: justify;
+                text-indent: 40px;
+                font-size: 25px;
+                margin-top: px;
+               
+            }
+            .info-skills{
+                margin-top: -10px;
+                margin-bottom: -35px;
+                font-size: 22px;
+            }
+                      
+        </style>
+        
+    </head>
+    <body>
+        
+        <div id = "Menu">
+            <button> 
+                <a href="index.html">Home </a>
+            </button>
+
+            <button> 
+                <a href="Dashboard.html">Dashboard </a>
+            </button>
+
+            <button>
+                <a href="Upload Pages.html">Upload</a>
+            </button>
+        </div>
+        
+        <div id="HomePage">
+            
+            <div class = "content">
+                
+                <div class = "info" >
+                    
+                    <h3 class = " info-personal-name">Genetia, Joey Mar M.</h3>
+                    <h3 class = "info-personal-course">Bachelor of Science in Computer Science <i>(1st Year)</i></h3>
+                    
+                </div>
+                <div class = "info-personal-bio">
+                    <p>
+                        I am a student that aims to be proficient in developing programs by utilizing knowledge at my disposal.
+                        Moreover, developing skills before I finish college can become my leverage which are be crucial in the
+                        job market. Hence, the objective at hand is having the advantage in the competitive job market of IT.
+
+                    </p>
+                    
+                </div>
+                <h1 style = "margin-top: -10px;">
+                    Skills
+                </h1>
+                <div class = "info-skills">
+                    <ul><li>
+                       Proficient in C++
+                    </li>
+                    <li>
+                        Proficient in Java
+                    </li>
+                    <li>
+                        Competent in HTML
+                    </li>
+                    <li>
+                        Good Communication Skills
+                        
+                    </li>
+                    <li>
+                        Logic Building
+                    </li>
+                    <li>
+                        Tech Savvy
+                    </li>
+                    </ul>
+
+                </div>
+                
+            </div>
+
+            
+
+
+        </div>
+        <div class = "Picture-item"><img src = "Profile.jpg"></img> </div>
+    
+
+
+
+
+
+
+    </body>
+
+
+
+</html>
