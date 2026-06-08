@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="tabIcon.png">
+    <style>
+        body{
+            overflow-y: auto;
+            overflow-x: scroll;
+            background-color: #F8F9FA;
+            font-family:'Trebuchet MS', 'Gill Sans', sans-serif;;
+        }
+        .menuBar{
+            position:fixed;
+            top: 0;
+            left: 0;
+
+            width: 100px;
+            height: 100vh;
+
+            background-color: #81b1db;
+            padding-top: 15px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+
+        }
+        .menuBar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: none;
+            text-align: left;
+            font-size: 16px;
+
+            color: #2D3142;
+            cursor: pointer;
+        }
+        .menuBar button:hover{
+            background-color: #EAF4F4;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:focus {
+            outline: none;
+        }
+        a:visited, a:hover, a:active {
+            color: inherit;
+            text-decoration: none;
+        }  
+        #uploadPage-Quiz{
+            margin-top: 30px;
+            overflow-y: auto;
+            max-width: 100%;
+        }
+        #uploadPage-Lab {
+            margin-top: 30px;
+            overflow-y: auto;
+            max-width: 100%;
+        }
+        #uploadPage-Exam {
+            margin-top: 30px;
+            overflow-y: auto;
+            max-width: 100%;
+        }
+
+        .uploadPage{
+            
+            margin-left: 110px;
+            border-radius: 10px;
+            
+            width: 230px;
+            
+            height: 360px;
+            background-color: #EAF4F4;
+            background-size: 400px;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
+        }
+        .uploadPage::-webkit-scrollbar {
+            width: 10px;
+        }
+        .uploadPage-webkit-scrollbar-track {
+            background: #8ec4f0;
+            border-radius: 3rem;
+        }
+        .uploadPage::-webkit-scrollbar-thumb {
+            background: #78a5ca;
+            border-radius: 3rem;
+        }
+        .uploadPage::-webkit-scrollbar-thumb:hover {
+            background: #5f83a1;
+        }
+        .uploadPage-Submit {
+            font-size: 9px;
+            margin-top: 5px;
+            margin-right: 5px;
+            display: flex;
+            justify-content: right;
+            transition: 0.2s ease;
+            cursor: pointer;
+            
+        }
+
+        
+        .submit-File
+        {   
+            margin-top: 5px;
+            font-style: oblique;
+            width: 90px;
+            height: 25px;
+            
+            align-content: center;
+            text-align: center;
+            border-radius: 0.5rem;
+            background: #8ec4f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .uploadPage-Submit button{
+            
+            width: 50px;
+            height: 25px;
+
+            align-items: center;
+            border-radius: 0.5rem;
+            background: #8ec4f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            
+
+        }
+        .uploadPage-Title{
+            text-align: center;
+            font-size: 18px;
+            color: #2D3142;
+            font-weight: bold;
+        }
+        .uploadPage-Heading h1{
+            color: #4F5D75;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .uploadPage-Image{
+            margin-left: 20px;
+            margin-top: 10px;
+            width: 190px;
+            height: 220px;
+            
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px #8ec4f0;
+            border: 1px solid white;
+        }
+        .uploadPage-Image img{
+            
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+        
+        
+        
+        
+        @media(min-width: 769px){
+        .menuBar{
+            width: 160px;
+            height: 100vh;
+        }
+        .menuBar button{
+            padding: 15px;
+            font-size: 26px;
+        }
+        body{
+            width: 1370px;
+        }
+        #uploadPage-Quiz{
+            margin-top: 90px;
+            margin-left: 190px;
+            max-width: 100%;
+        }
+        #uploadPage-Lab {
+            margin-top: -500px;
+            margin-left: 590px;
+            max-width: 100%;
+        }
+        #uploadPage-Exam {
+            margin-top: -500px;
+            margin-left: 980px;
+            max-width: 100%;
+        }
+
+        .uploadPage{
+            margin-top: 30px;
+            border-radius: 10px;
+            width: 330px;
+            height: 500px;
+        }
+        .uploadPage-Title{
+            font-size: 30px;
+            margin-bottom: -25px;
+        }
+        .uploadPage-Heading h1{
+            font-size: 26px;
+        }
+        .uploadPage-Image{
+            width: 280px;
+            height: 330px;
+        }
+        .uploadPage-Submit {
+            
+            margin-right: 10px;
+            
+        }
+
+
+        }
+    
+        
+    </style>
+
+</head>
+<body>
+    <div class = "menuBar" id = "idMenuBar">
+        <button>
+            <a href="index.html">Home </a>
+        </button>
+        <button>
+            <a href="dashboardPage.html">Dashboard </a>
+        </button>
+         <button>
+            <a href="uploadPage.html">Upload </a>
+        </button>
+
+    </div>
+    <div id = "uploadPageCard">
+        <div class = "uploadPage" id = "uploadPage-Quiz">
+            <div class = "uploadPage-Title">
+                <p>QUIZZES</p>
+            </div>
+            <div class = "uploadPage-Heading">
+                <h1>Quiz 1</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "QUIZ 1.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+            
+            <div class = "uploadPage-Heading">
+                <h1>Quiz 2</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "QUIZ 2.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+            <div class = "uploadPage-Heading">
+                <h1>Quiz 3</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "QUIZ 3.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" style="margin-bottom: 15px;" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+        </div>
+        
+        <div class = "uploadPage" id = "uploadPage-Lab">
+            <div class = "uploadPage-Title">
+                <p>LABORATORY</p>
+            </div>
+            <div class = "uploadPage-Heading">
+                <h1>Lab 1</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "LAB 1.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+            <div class = "uploadPage-Heading">
+                <h1>Lab 2</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "LAB 2.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" style="margin-bottom: 15px;" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+        </div>
+        <div class = "uploadPage" id = "uploadPage-Exam">
+            <div class = "uploadPage-Title">
+                <p>EXAM</p>
+            </div>
+            <div class = "uploadPage-Heading">
+                <h1>Midterms</h1>
+            </div>
+            <div class = "uploadPage-Image">
+                <img src = "MIDTERMS.jpg" alt = "N/A">
+            </div>
+            <div class = "uploadPage-Submit">
+                <label class = "submit-File">
+                    <label>UPLOAD FILE HERE</label>
+                    <input type = "file" hidden>
+                </label>
+                    <button class = "uploadPage-Submit" style="margin-bottom: 15px;" hidden>
+                    <label>SUBMIT</label>
+
+                    </button>
+            </div>
+        </div>
+    </div>
+
+</body>

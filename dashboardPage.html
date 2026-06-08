@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="tabIcon.png">
+    <style>
+        body{
+            overflow-y: auto;
+            background-color: #F8F9FA;
+            font-family:'Trebuchet MS', 'Gill Sans', sans-serif;;
+        }
+        .menuBar{
+            position:fixed;
+            top: 0;
+            left: 0;
+
+            width: 100px;
+            height: 100vh;
+
+            background-color: #81b1db;
+            padding-top: 15px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+
+        }
+        .menuBar button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: none;
+            text-align: left;
+            font-size: 16px;
+
+            color: #2D3142;
+            cursor: pointer;
+        }
+        .menuBar button:hover{
+            background-color: #EAF4F4;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:focus {
+            outline: none;
+        }
+        a:visited, a:hover, a:active {
+            color: inherit;
+            text-decoration: none;
+        }  
+        .dashboard{
+            position:fixed;
+            border-radius: 10px;
+
+            margin-top: 40px;
+            margin-left: 110px;
+            width: 230px;
+            max-width: 100%;
+            height: 590px;
+            overflow-y: auto;
+
+            background-color: #EAF4F4;
+            background-size: 400px;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
+        }
+        .dashboard::-webkit-scrollbar {
+            width: 10px;
+        }
+        .dashboard-webkit-scrollbar-track {
+            background: #8ec4f0;
+            border-radius: 3rem;
+        }
+        .dashboard::-webkit-scrollbar-thumb {
+            background: #78a5ca;
+            border-radius: 3rem;
+        }
+        .dashboard::-webkit-scrollbar-thumb:hover {
+            background: #5f83a1;
+        }
+        #dashboard-Title{
+            text-align: center;
+            font-size: 18px;
+            color: #2D3142;
+            font-weight: bold;
+
+
+        }
+        #dashboard-Quiz{
+            padding-left: 10px;
+        }
+        #dashboard-Quiz h1{
+            color: #2D3142;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #dashboard-Quiz h2{
+            color: #4F5D75;
+            margin-top: -10px;
+            font-size: 17px;
+         }
+         #dashboard-Quiz h3{
+            color: #4F5D75;
+            margin-top: -10px;
+            margin-bottom: 0px;
+            font-size: 14px;
+            font-style: italic;
+         }
+        .dashboard-Progress{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: -0px;
+            width: 100%;
+            height: 10px;
+            
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        .dashboard-Progress::-webkit-progress-bar{
+            background-color: #BFC0C0;
+            border-radius: 10px;
+        }
+        .dashboard-Progress::-webkit-progress-value{
+            background-color: #5B8DB8;
+            border-radius: 10px;
+        }
+        #dashboard-Percent{
+            margin-top: -5px;
+            margin-bottom: -15px;
+            padding-right: 10px;
+            
+            text-align: right;
+            font-size: 13px;
+        }
+        @media(min-width: 769px){
+        .menuBar{
+            width: 160px;
+            height: 100vh;
+        }
+        .menuBar button{
+            padding: 15px;
+            font-size: 26px;
+        }
+        .dashboard{
+            margin-top: 60px;
+            margin-left: 210px;
+            width: 600px;
+        }
+        .dashboard::-webkit-scrollbar {
+            width: 15px;
+        }
+        #dashboard-Title{
+            font-size: 30px;
+        }
+        #dashboard-Quiz{
+            padding-left: 30px;
+        }
+        #dashboard-Quiz h1{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        #dashboard-Quiz h2{
+            margin-top: -10px;
+            font-size: 21px;
+         }
+         #dashboard-Quiz h3{
+            color: #4F5D75;
+            margin-top: -10px;
+            margin-bottom: 0px;
+            font-size: 18px;
+            font-style: italic;
+         }
+        .dashboard-Progress{
+            padding-left: 30px;
+            padding-right: 20px;
+            height: 15px;
+            
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        #dashboard-Percent{
+            margin-top: -5px;
+            margin-bottom: -15px;
+            padding-right: 20px;
+            font-size: 16px;
+        }
+
+        }
+        
+        
+    </style>
+
+</head>
+<body>
+    <div class = "menuBar" id = "idMenuBar">
+        <button>
+            <a href="index.html">Home </a>
+        </button>
+        <button>
+            <a href="dashboardPage.html">Dashboard </a>
+        </button>
+         <button>
+            <a href="uploadPage.html">Upload </a>
+        </button>
+
+    </div>
+    <div class = "dashboard">
+        <div id = "dashboard-Title">
+            <p>DASHBOARD PROGRESS</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h1>QUIZZES</h1>
+            <h2>QUIZ 1</h2>
+            <h3>SCORE:18/20</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="18" max="20"></progress>
+        </div>
+        <div id = "dashboard-Percent">
+            <p>90%</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h2>QUIZ 2</h2>
+            <h3>SCORE:16/20</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="16" max="20"></progress>
+        </div>
+        <div id = "dashboard-Percent">
+            <p>80%</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h2>QUIZ 3</h2>
+            <h3>SCORE:3/20</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="3" max="20"></progress>
+        </div>
+        <div id = "dashboard-Percent">
+            <p>15%</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h1>LABORATORY</h1>
+            <h2>LAB 1</h2>
+            <h3>SCORE:95/100</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="95" max="100"></progress>
+        </div>
+        <div id = "dashboard-Percent">
+            <p>95%</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h2>LAB 2</h2>
+            <h3>SCORE:95/100</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="95" max="100"></progress>
+        </div>
+        <div id = "dashboard-Percent">
+            <p>95%</p>
+        </div>
+        <div id = "dashboard-Quiz">
+            <h1>EXAM</h1>
+            <h2>MIDTERMS</h2>
+            <h3>SCORE:48/70</h3>
+        </div>
+        <div>
+            <progress class = "dashboard-Progress" value="48" max="70"></progress>
+        </div>
+        <div id = "dashboard-Percent" style = "margin-bottom: 30px;">
+            <p>95%</p>
+        </div>
+    
+    </div>
+    
+
+
+
+</body>
